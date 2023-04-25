@@ -1,7 +1,8 @@
 :root {
   --lightbg: #fff;
   --highlightbg: #f8f8f8;
-  --gradientbg: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%); }
+  --gradientbg: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%);
+  --mainfont: 'Lato'; }
 
 *, *::before, *::after {
   box-sizing: border-box; }
@@ -18,15 +19,26 @@ h3 {
 body {
   background-color: var(--lightbg); }
 
-.container {
+section .container {
   max-width: 1000px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
-  position: relative; }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: orange; }
 
 section.highlightbg {
   background-color: var(--highlightbg); }
 
 section.gradientbg {
   background: var(--gradientbg); }
+
+#header .cta {
+  margin-top: 50px;
+  width: 630px;
+  text-align: center;
+  background-color: pink; }
