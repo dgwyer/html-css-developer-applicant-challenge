@@ -1,0 +1,19 @@
+{
+  "name": "html-css-developer-applicant-challenge",
+  "version": "1.0.0",
+  "description": "Create a landing page in HTML and CSS to match the specified Figma design.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dgwyer/html-css-developer-applicant-challenge.git"
+  },
+  "author": "David Gwyer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dgwyer/html-css-developer-applicant-challenge/issues"
+  },
+  "homepage": "https://github.com/dgwyer/html-css-developer-applicant-challenge#readme"
+}
