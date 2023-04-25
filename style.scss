@@ -1,0 +1,46 @@
+// CSS Custom Properties.
+:root {
+	--lightbg: #fff;
+	--highlightbg: #f8f8f8;
+	--gradientbg: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%);
+}
+
+// todo
+//
+// - add body font styles
+
+// Basic CSS Reset.
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+	margin: 0;
+	padding: 0;
+}
+h1,
+h2,
+h3 {
+	margin: 0;
+}
+
+// Layout styles.
+body {
+	background-color: var(--lightbg);
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: relative;
+}
+
+section.highlightbg {
+	background-color: var(--highlightbg);
+}
+
+section.gradientbg {
+	background: var(--gradientbg);
+}
+
+// Header styles.
