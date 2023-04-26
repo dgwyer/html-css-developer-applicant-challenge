@@ -7,11 +7,9 @@
 	--titlefont: 'Arvo', serif;
 	--secondary-text: #777;
 	--title-text: #444;
+	--highlight: #e27730;
+	--highlight-hover: #cd631d;
 }
-
-// todo
-//
-// - add body font styles
 
 // Basic CSS Reset.
 *, *::before, *::after {
@@ -29,6 +27,9 @@ h1,
 h2,
 h3 {
 	margin: 0;
+}
+a {
+	text-decoration: none;
 }
 
 // Layout styles.
@@ -53,7 +54,7 @@ section {
 	}
 
 	&.gradientbg {
-		background: var(--gradientbg);
+		background-color: var(--gradientbg);
 	}	
 }
 
@@ -81,17 +82,23 @@ section {
 				line-height: 24px;
 				font-weight: 700;
 				text-align: center;
-				background: #FFFFFF;
-				border: 1px solid #DDDDDD;
+				background-color: #fff;
+				border: 1px solid #ddd;
+				color: var(--secondary-text);
 				border-radius: 3px;
 				padding: 20px 85px;
 			}
 
 			.primary-action {
-				background: #E27730;
+				background-color: var(--highlight);
 				border: 1px solid rgba(0, 0, 0, 0.2);
 				color: #fff;
 				padding: 20px 58px;
+				transition: all .1s ease-in-out;
+
+				&:hover {
+					background-color: var(--highlight-hover);
+				}
 			}
 		}
 
@@ -112,13 +119,12 @@ section {
 		}
 	}
 
-	.video {
+	.video a {
 		display: grid;
 		grid-template: "container";
 		place-items: center;
 		place-content: center;
 		margin: 0 0 -270px 0;
-
 		box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
 		border-radius: 6px;
 		overflow: hidden;
@@ -127,5 +133,45 @@ section {
 			grid-area: container;
 			max-width: 100%;
 		}
+	}
+}
+
+// Large features grid.
+#large-features {
+	.container {
+		margin-top: 367px;
+	}
+
+	.features {
+		width: 100%;
+		border: 1px red solid;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		// grid-template-rows: auto auto;
+		justify-content: space-evenly;
+
+		.feature {
+			line-height: 24px;
+			//display: flex;
+			//flex-direction: column;
+			//flex-flow: column wrap;
+			//justify-content: center;
+			//align-items: center;
+			max-width: 250px;
+			border: 1px solid blue;
+			text-align: center;
+
+			img {
+				width: 48px;
+				height: 48px;
+			}
+
+			h3 {
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 30px;
+				color: var(--title-text);
+			}
+		}		
 	}
 }

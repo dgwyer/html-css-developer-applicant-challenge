@@ -13,3 +13,9 @@ For this project I used [Node-sass](https://www.npmjs.com/package/node-sass) to 
 Using Browsersync also allows for easier cross-browser testing. Each browser instance synchronizes scrolling too, so all other browser instances scroll together which is a useful feature.
 
 The project assets Zip file was downloaded and extracted to the `./assets` folder. I noticed that the pro badge SVG had a different color to the Figma mockup so I changed it to match.
+
+I obtained the button hover color and timed fade in from the main [WPForms](https://wpforms.com) website.
+
+## Responsive Behaviour
+
+- The video play button SVG reduces in size as the browser width reduces. 

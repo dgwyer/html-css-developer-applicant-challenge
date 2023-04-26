@@ -5,7 +5,9 @@
   --mainfont: 'Lato', sans-serif;
   --titlefont: 'Arvo', serif;
   --secondary-text: #777;
-  --title-text: #444; }
+  --title-text: #444;
+  --highlight: #e27730;
+  --highlight-hover: #cd631d; }
 
 *, *::before, *::after {
   box-sizing: border-box; }
@@ -22,6 +24,9 @@ h1,
 h2,
 h3 {
   margin: 0; }
+
+a {
+  text-decoration: none; }
 
 body {
   background-color: var(--lightbg); }
@@ -41,7 +46,7 @@ section.highlightbg {
   background-color: var(--highlightbg); }
 
 section.gradientbg {
-  background: var(--gradientbg); }
+  background-color: var(--gradientbg); }
 
 #header .cta {
   margin-top: 50px;
@@ -61,15 +66,19 @@ section.gradientbg {
       line-height: 24px;
       font-weight: 700;
       text-align: center;
-      background: #FFFFFF;
-      border: 1px solid #DDDDDD;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      color: var(--secondary-text);
       border-radius: 3px;
       padding: 20px 85px; }
     #header .cta .cta-btn-wrapper .primary-action {
-      background: #E27730;
+      background-color: var(--highlight);
       border: 1px solid rgba(0, 0, 0, 0.2);
       color: #fff;
-      padding: 20px 58px; }
+      padding: 20px 58px;
+      transition: all .1s ease-in-out; }
+      #header .cta .cta-btn-wrapper .primary-action:hover {
+        background-color: var(--highlight-hover); }
   #header .cta h1 {
     font-family: 'Arvo';
     font-weight: 400;
@@ -83,7 +92,7 @@ section.gradientbg {
       margin: 0 0 0 3px;
       bottom: 64.52%; }
 
-#header .video {
+#header .video a {
   display: grid;
   grid-template: "container";
   place-items: center;
@@ -92,6 +101,29 @@ section.gradientbg {
   box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
   border-radius: 6px;
   overflow: hidden; }
-  #header .video img {
+  #header .video a img {
     grid-area: container;
     max-width: 100%; }
+
+#large-features .container {
+  margin-top: 367px; }
+
+#large-features .features {
+  width: 100%;
+  border: 1px red solid;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-evenly; }
+  #large-features .features .feature {
+    line-height: 24px;
+    max-width: 250px;
+    border: 1px solid blue;
+    text-align: center; }
+    #large-features .features .feature img {
+      width: 48px;
+      height: 48px; }
+    #large-features .features .feature h3 {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 30px;
+      color: var(--title-text); }
