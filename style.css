@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --lightbg: #fff;
   --highlightbg: #f8f8f8;
@@ -31,18 +32,18 @@ a {
 body {
   background-color: var(--lightbg); }
 
+section.highlightbg {
+  background-color: var(--highlightbg); }
+
+section.gradientbg {
+  background-image: var(--gradientbg); }
+
 section .container {
   max-width: 1000px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
   position: relative; }
-
-section.highlightbg {
-  background-color: var(--highlightbg); }
-
-section.gradientbg {
-  background-color: var(--gradientbg); }
 
 #header .container {
   display: flex;
@@ -57,29 +58,6 @@ section.gradientbg {
     line-height: 28px; }
     #header .container .cta p {
       opacity: 0.8; }
-    #header .container .cta .cta-btn-wrapper {
-      display: flex;
-      justify-content: space-between;
-      margin: 40px 0 50px 0; }
-      #header .container .cta .cta-btn-wrapper .cta-btn {
-        display: inline-block;
-        font-size: 20px;
-        line-height: 24px;
-        font-weight: 700;
-        text-align: center;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        color: var(--secondary-text);
-        border-radius: 3px;
-        padding: 20px 85px; }
-      #header .container .cta .cta-btn-wrapper .primary-action {
-        background-color: var(--highlight);
-        border: 1px solid rgba(0, 0, 0, 0.2);
-        color: #fff;
-        padding: 20px 58px;
-        transition: all .1s ease-in-out; }
-        #header .container .cta .cta-btn-wrapper .primary-action:hover {
-          background-color: var(--highlight-hover); }
     #header .container .cta h1 {
       font-family: 'Arvo';
       font-weight: 400;
@@ -159,3 +137,88 @@ section.gradientbg {
     #large-features .features .feature:nth-child(6) .feature-content {
       margin: 0 0 0 auto;
       padding-top: 50px; }
+
+#testimonials .container {
+  margin-top: 100px;
+  padding-top: 100px; }
+  #testimonials .container .testimonials-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px; }
+    #testimonials .container .testimonials-wrapper .testimonial {
+      padding: 30px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      flex-basis: 33.33%; }
+      #testimonials .container .testimonials-wrapper .testimonial p {
+        font-size: 16px;
+        line-height: 24px; }
+      #testimonials .container .testimonials-wrapper .testimonial p::before {
+        content: "“"; }
+      #testimonials .container .testimonials-wrapper .testimonial p::after {
+        content: "”"; }
+      #testimonials .container .testimonials-wrapper .testimonial .testimonial-footer {
+        display: flex;
+        justify-content: space-between; }
+        #testimonials .container .testimonials-wrapper .testimonial .testimonial-footer .testimonial-author {
+          font-size: 14px;
+          line-height: 17px;
+          color: #aaa; }
+  #testimonials .container .cta-btn-wrapper {
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px; }
+    #testimonials .container .cta-btn-wrapper a:nth-child(1) {
+      background-color: #f8f8f8; }
+
+#hero-screenshot .container {
+  margin-top: 100px;
+  padding: 100px 20px; }
+  #hero-screenshot .container .hero-screenshot-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 50px; }
+    #hero-screenshot .container .hero-screenshot-wrapper h2 {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 38px;
+      color: var(--title-text); }
+    #hero-screenshot .container .hero-screenshot-wrapper p {
+      font-size: 18px;
+      line-height: 28px; }
+
+#simple-screenshots .container {
+  margin-top: 100px;
+  padding: 0 20px; }
+
+#secondary-features .container {
+  margin-top: 100px;
+  padding: 0 20px 100px 20px; }
+
+.cta-btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0 50px 0; }
+  .cta-btn-wrapper .cta-btn {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: var(--secondary-text);
+    border-radius: 3px;
+    padding: 20px 85px; }
+  .cta-btn-wrapper .primary-action {
+    background-color: var(--highlight);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 20px 58px;
+    transition: all .1s ease-in-out; }
+    .cta-btn-wrapper .primary-action:hover {
+      background-color: var(--highlight-hover); }
