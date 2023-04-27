@@ -9,6 +9,7 @@
 	--title-text: #444;
 	--highlight: #e27730;
 	--highlight-hover: #cd631d;
+	--link-text: #036aab;
 }
 
 // Basic CSS Reset.
@@ -28,7 +29,7 @@ h2,
 h3 {
 	margin: 0;
 }
-a {
+a[role="button"] {
 	text-decoration: none;
 }
 
@@ -115,44 +116,6 @@ section {
 	}
 
 	.features {
-		width: 100%;
-		display: grid;
-		grid-template-columns: 6fr 7fr 6fr;
-
-		.feature {
-			line-height: 24px;
-			border: 1px solid #ddd;
-			border-top: none;
-			border-right: none;
-
-			.feature-content {
-				max-width: 250px;
-				text-align: center;
-				margin: 0 auto;
-
-				img {
-					width: 48px;
-					height: 48px;
-				}
-
-				h3 {
-					font-weight: 700;
-					font-size: 24px;
-					line-height: 30px;
-					color: var(--title-text);
-					margin-top: 13px;
-					//max-width: 230px;
-					//background-color: red;
-					//margin:0 auto;
-				}
-
-				p {
-					margin-top: 18px;
-					margin-bottom: 0;
-				}
-			}
-		}
-
 		.feature:nth-child(1) {
 			border-left: none;
 
@@ -299,6 +262,13 @@ section {
 	.container {
 		margin-top: 100px;
 		padding: 0 20px;
+
+		.simple-screenshot-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: flex-start;
+			gap: 50px;
+		}
 	}
 }
 
@@ -307,9 +277,51 @@ section {
 	.container {
 		margin-top: 100px;
 		padding: 0 20px 100px 20px;
+
+		.title-text {
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 36px;
+			text-align: center;
+			color: var(--title-text);
+			margin-top: 100px;
+		}
+
+		.sub-text {
+			font-size: 18px;
+			line-height: 22px;
+			text-align: center;
+			margin-top: 15px;
+
+			a {
+				color: var(--link-text);
+			}
+		}
+
+		.features {
+			.feature {
+				margin-top: 100px;
+				border-bottom: none;
+			}
+
+			.feature:nth-child(1) {
+				border-left: none;
+
+				.feature-content {
+					margin: 0 auto 0 0;
+				}
+			}
+
+			.feature:nth-child(3) {
+				.feature-content {
+					margin: 0 0 0 auto;
+				}
+			}
+		}
 	}
 }
 
+// General call to action styles.
 .cta-btn-wrapper {
 	display: flex;
 	justify-content: space-between;
@@ -337,6 +349,46 @@ section {
 
 		&:hover {
 			background-color: var(--highlight-hover);
+		}
+	}
+}
+
+// General features styles.
+.features {
+	display: grid;
+	grid-template-columns: 6fr 7fr 6fr;
+
+	.feature {
+		line-height: 24px;
+		border: 1px solid #ddd;
+		border-top: none;
+		border-right: none;
+
+		.feature-content {
+			max-width: 250px;
+			text-align: center;
+			margin: 0 auto;
+
+			img {
+				width: 48px;
+				height: 48px;
+			}
+
+			h3 {
+				font-weight: 700;
+				font-size: 24px;
+				line-height: 30px;
+				color: var(--title-text);
+				margin-top: 13px;
+				//max-width: 230px;
+				//background-color: red;
+				//margin:0 auto;
+			}
+
+			p {
+				margin-top: 18px;
+				margin-bottom: 0;
+			}
 		}
 	}
 }
