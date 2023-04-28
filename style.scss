@@ -10,6 +10,7 @@
 	--highlight: #e27730;
 	--highlight-hover: #cd631d;
 	--link-text: #036aab;
+	--features-border: 1px solid #ddd;
 }
 
 // Basic CSS Reset.
@@ -126,17 +127,12 @@ section {
 		}
 
 		.feature:nth-child(2) {
-			//border-left: none;
-
 			.feature-content {
-				//margin: 0;
 				padding-bottom: 50px;
 			}
 		}
 
 		.feature:nth-child(3) {
-			//border-left: none;
-
 			.feature-content {
 				margin: 0 0 0 auto;
 				padding-bottom: 50px;
@@ -157,7 +153,6 @@ section {
 			border-bottom: none;
 
 			.feature-content {
-				//margin: 0;
 				padding-top: 50px;
 			}
 		}
@@ -360,7 +355,7 @@ section {
 
 	.feature {
 		line-height: 24px;
-		border: 1px solid #ddd;
+		border: var(--features-border);
 		border-top: none;
 		border-right: none;
 
@@ -388,6 +383,99 @@ section {
 			p {
 				margin-top: 18px;
 				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+@media (max-width: 900px) {
+	section#large-features .container {
+		.features {
+			grid-template-columns: 1fr 1fr;
+
+			.feature {
+				.feature-content {
+					margin: 0 auto;
+					padding-bottom: 50px;
+					padding-top: 0;
+				}
+			}
+
+			.feature:nth-child(3), .feature:nth-child(4), .feature:nth-child(5), .feature:nth-child(6) {
+				.feature-content {
+					padding-top: 50px;
+				}
+			}
+			.feature:nth-child(5), .feature:nth-child(6) {
+				.feature-content {
+					padding-bottom: 0;
+				}
+			}
+			.feature:nth-child(2n + 3) {
+				border-left: none;
+			}
+			.feature:nth-child(4) {
+				border-left: var(--features-border);
+				border-bottom: var(--features-border);
+			}
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	section#header {
+		.cta-btn-wrapper {
+			flex-direction: column;
+			gap: 1rem;
+		}
+
+		.video .play-icon {
+			max-width: 15%;
+		}
+	}
+
+	section#testimonials .container {
+		.cta-btn-wrapper {
+			flex-direction: column;
+			gap: 1rem;
+		}		
+	}
+
+	section#large-features .container {
+		margin-top: 350px;
+
+		.features {
+			grid-template-columns: 1fr;
+
+			.feature {
+				border-left: none;
+				border-right: none;
+				border-bottom: var(--features-border);
+
+				.feature-content {
+					max-width: 350px;
+					margin: 0 auto;
+					padding-bottom: 50px;
+					padding-top: 0;
+				}
+			}
+
+			.feature:nth-child(2), .feature:nth-child(4), .feature:nth-child(5), .feature:nth-child(6) {
+				.feature-content {
+					padding-top: 50px;
+					padding-bottom: 50px;
+					//background-color: pink;
+				}
+			}
+			.feature:nth-child(6) {
+				border-bottom: none;
+
+				.feature-content {
+					padding-bottom: 0;
+				}
+			}
+			.feature:nth-child(4) {
+				border-left: none;
 			}
 		}
 	}
