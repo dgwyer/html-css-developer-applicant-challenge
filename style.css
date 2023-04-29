@@ -172,6 +172,8 @@ section .container {
     #hero-screenshot .container .hero-screenshot-wrapper p {
       font-size: 18px;
       line-height: 28px; }
+    #hero-screenshot .container .hero-screenshot-wrapper img {
+      max-width: 48%; }
 
 #simple-screenshots .container {
   margin-top: 100px;
@@ -179,9 +181,10 @@ section .container {
   #simple-screenshots .container .simple-screenshot-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 50px; }
+    gap: 50px;
+    justify-content: center; }
     #simple-screenshots .container .simple-screenshot-wrapper img {
-      max-width: 100%; }
+      max-width: 50%; }
 
 #secondary-features .container {
   margin-top: 100px;
@@ -262,7 +265,9 @@ section .container {
 @media (max-width: 1050px) {
   section#simple-screenshots .container .simple-screenshot-wrapper {
     flex-direction: column;
-    align-items: center; } }
+    align-items: center; }
+    section#simple-screenshots .container .simple-screenshot-wrapper img {
+      max-width: 90%; } }
 
 @media (max-width: 900px) {
   section#large-features .container .features {
@@ -287,6 +292,8 @@ section .container {
     align-items: center;
     gap: 70px;
     padding: 0 80px; }
+    section#hero-screenshot .container .hero-screenshot-wrapper img {
+      max-width: 100%; }
   section#secondary-features .container .features {
     grid-template-columns: 1fr; }
     section#secondary-features .container .features .feature {
