@@ -11,6 +11,7 @@
 	--highlight-hover: #cd631d;
 	--link-text: #036aab;
 	--features-border: 1px solid #ddd;
+	--img-drop-shadow: drop-shadow(0px 10px 30px rgba(0, 0, 0, 0.1));
 }
 
 // Basic CSS Reset.
@@ -249,8 +250,14 @@ section {
 				line-height: 28px;
 			}
 
+			div, picture {
+				width: 48%;
+			}
+
 			img {
-				max-width: 48%;
+				width: 100%;
+				filter: var(--img-drop-shadow);
+				border-radius: 6px;
 			}
 		}
 	}
@@ -269,7 +276,9 @@ section {
 			justify-content: center;
 
 			img {
-				max-width: 50%;
+				max-width: 100%;
+				filter: var(--img-drop-shadow);
+				border-radius: 6px;
 			}
 		}
 	}
@@ -383,9 +392,6 @@ section {
 				line-height: 30px;
 				color: var(--title-text);
 				margin-top: 13px;
-				//max-width: 230px;
-				//background-color: red;
-				//margin:0 auto;
 			}
 
 			p {
@@ -401,9 +407,10 @@ section {
 		.simple-screenshot-wrapper {
 			flex-direction: column;
 			align-items: center;
+			padding: 0 80px;
 
 			img {
-				max-width: 90%;
+				max-width: 100%;
 			}
 		}
 	}
@@ -445,19 +452,6 @@ section {
 	section#testimonials .container {
 		.testimonials-wrapper {
 			gap: 25px;
-		}
-	}
-
-	section#hero-screenshot .container {
-		.hero-screenshot-wrapper {
-			flex-direction: column;
-			align-items: center;
-			gap: 70px;
-			padding: 0 80px;
-
-			img {
-				max-width: 100%;
-			}
 		}
 	}
 
@@ -562,7 +556,29 @@ section {
 
 	section#hero-screenshot .container {
 		.hero-screenshot-wrapper {
+			flex-direction: column;
+			align-items: center;
+			gap: 70px;
+			//padding: 0 80px;
 			padding: 0 20px;
+
+			div, picture {
+				width: 100%;
+			}
+		}
+	}
+
+	section#simple-screenshots .container {
+		.simple-screenshot-wrapper {
+			// flex-direction: column;
+			// align-items: center;
+			// gap: 70px;
+			//padding: 0 80px;
+			padding: 0 20px;
+
+			div, picture {
+				width: 100%;
+			}
 		}
 	}
 

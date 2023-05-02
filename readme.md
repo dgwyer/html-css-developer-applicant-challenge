@@ -16,6 +16,7 @@ The project assets Zip file was downloaded and extracted to the `./assets` folde
 
 I obtained the button hover color and timed fade in from the main [WPForms](https://wpforms.com) website.
 
+- Fully responsive, including usage of `picture` tag to control which image is loaded depending on browser width.
 ## Responsive Behaviour
 
 - The video play button SVG reduces in size as the browser width reduces. 
