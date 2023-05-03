@@ -2,7 +2,7 @@
 
 ## Viewing the Project
 
-For convenience you  can view the live finished project via [GitHub pages here](https://dgwyer.github.io/html-developer-challenge-gwyer/).
+For convenience you  can view the live finished project via **[GitHub pages here](https://dgwyer.github.io/html-developer-challenge-gwyer/)**.
 ## Local Installation
 
 To install the project locally, run `npm i` to install the package dependencies and then run `npm start` to watch files and start the Browsersync server. Then goto http://localhost:3000/ to view the `index.html` page.
