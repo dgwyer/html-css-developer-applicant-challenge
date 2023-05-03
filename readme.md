@@ -1,6 +1,6 @@
 # Developer Applicant Challenge
 
-## Viewing the Project
+## Viewing the Finished Project
 
 For convenience you  can view the live finished project via **[GitHub pages here](https://dgwyer.github.io/html-developer-challenge-gwyer/)**.
 ## Local Installation
